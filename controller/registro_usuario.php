@@ -17,11 +17,29 @@ if (!empty($_POST["btnRegistrarUsuario"])) {
                 echo '<div class="alert alert-success">Usuario Registrado con Exito</div>';
             } else {
                 echo '<div class="alert alert-danger">Error al registrar Usuario</div>';
-                // echo mysqli_error($conexion);
             }
         }
     } else {
-        echo '<div class="alert alert-warning">Alguno de los campos está vacío</div>';
+        echo
+        '<script>  // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+            form.addEventListener("submit", (event) => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+
+                form.classList.add("was-validated");
+            }, false);
+        });
+    })();</script>';
     }
 }
 ?>

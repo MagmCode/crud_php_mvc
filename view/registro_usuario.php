@@ -16,7 +16,7 @@
 
 
     <div class="d-flex justify-content-center align-items-center vh-100">
-        <form class="col-4 p-3" method="POST">
+        <form class="col-4 p-3 needs-validation" novalidate method="POST">
             <h3 class="text-center text-secondary">Registro de Usuario</h3>
             <?php
             include "../model/conexion_usuario.php";
@@ -25,20 +25,32 @@
             ?>
 
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"> Nombre</label>
-                <input type="text" class="form-control" name="nombre">
+                <label for="validationServer03" class="form-label"> Nombre</label>
+                <input type="text" class="form-control" name="nombre" id="validationServer03">
+                <div class="invalid-feedback">
+                    El campo no puede estar vacio
+                </div>
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"> Apellido </label>
-                <input type="text" class="form-control" name="apellido">
+                <label for="validationServer04" class="form-label"> Apellido </label>
+                <input type="text" class="form-control" name="apellido" id="validationServer04">
+                <div class="invalid-feedback">
+                    El campo no puede estar vacio
+                </div>
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"> Usuario </label>
-                <input type="text" class="form-control" name="usuario">
+                <label for="validationServer05" class="form-label"> Usuario </label>
+                <input type="text" class="form-control" name="usuario" id="validationServer05">
+                <div class="invalid-feedback">
+                    El campo no puede estar vacio
+                </div>
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label"> Password</label>
-                <input type="password" class="form-control" name="clave">
+                <label for="validationServer06" class="form-label"> Password</label>
+                <input type="password" class="form-control" name="clave" id="validationServer06">
+                <div class="invalid-feedback">
+                    El campo no puede estar vacio
+                </div>
             </div>
             <div class="d-grid gap-2 col-6 d-md-block mx-auto">
                 <button type="submit" class="btn btn-primary" name="btnRegistrarUsuario" value="ok">Registrar</button>
